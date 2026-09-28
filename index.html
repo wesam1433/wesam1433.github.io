@@ -110,6 +110,16 @@
     border-radius: var(--radius); padding: 26px; margin-bottom: 18px;
   }
   .card .top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+  /* Company logo next to each job */
+  .co { display: flex; align-items: center; gap: 16px; }
+  .co-logo {
+    position: relative; flex: 0 0 auto; width: 56px; height: 56px; border-radius: 12px;
+    background: #fff; border: 1px solid var(--line); overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .co-logo .mono { font-family: "Fraunces", serif; font-weight: 700; font-size: 15px; letter-spacing: .02em; }
+  .co-logo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; padding: 6px; background: #fff; }
+  .co-logo svg { width: 28px; height: 28px; }
   .date { color: var(--muted); font-size: 14px; font-weight: 500; white-space: nowrap; }
   .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
   .tag { background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600; padding: 4px 11px; border-radius: 999px; }
@@ -294,9 +304,12 @@
 
     <div class="card reveal">
       <div class="top">
-        <div>
-          <h3>Supply Chain Data Analyst</h3>
-          <div class="meta">Kenvue · Markham, ON</div>
+        <div class="co">
+          <div class="co-logo"><span class="mono" style="color:#14213d">K</span><img src="logo-kenvue.png" alt="Kenvue logo" onerror="this.remove()"></div>
+          <div>
+            <h3>Supply Chain Data Analyst</h3>
+            <div class="meta">Kenvue · Markham, ON</div>
+          </div>
         </div>
         <div class="date">Dec 2025 – Aug 2026</div>
       </div>
@@ -313,9 +326,12 @@
 
     <div class="card reveal">
       <div class="top">
-        <div>
-          <h3>Client Service Representative</h3>
-          <div class="meta">CIBC · Milton, ON</div>
+        <div class="co">
+          <div class="co-logo"><span class="mono" style="color:#c41f3e">CIBC</span><img src="logo-cibc.png" alt="CIBC logo" onerror="this.remove()"></div>
+          <div>
+            <h3>Client Service Representative</h3>
+            <div class="meta">CIBC · Milton, ON</div>
+          </div>
         </div>
         <div class="date">Jul 2024 – Sep 2025</div>
       </div>
@@ -323,14 +339,21 @@
         <li>Investigated client account issues and transaction discrepancies using internal banking and CRM systems, applying structured problem-solving under deadline pressure.</li>
         <li>Explained technical findings clearly to clients and internal teams, adapting for non-technical audiences.</li>
         <li>Managed a high volume of concurrent cases in a fast-paced team environment while keeping accuracy high.</li>
+        <li>Proactively promoted and explained banking products such as mortgages, lines of credit, and investment accounts.</li>
+        <li>Used advanced financial software and CRM tools to efficiently manage client accounts, track interactions, and analyze financial data.</li>
+        <li>Increased client adoption of financial products by <strong>30% within three months</strong>, exceeding branch sales targets.</li>
       </ul>
+      <div class="tags"><span class="tag">Financial Analysis</span><span class="tag">Client Relationships</span><span class="tag">CRM</span><span class="tag">Excel</span></div>
     </div>
 
     <div class="card reveal">
       <div class="top">
-        <div>
-          <h3>Business Strategy Intern</h3>
-          <div class="meta">ITMSA @ Ted Rogers School of Management · Toronto, ON</div>
+        <div class="co">
+          <div class="co-logo"><span class="mono" style="color:#004c9b">IT</span><img src="logo-itmsa.png" alt="ITMSA logo" onerror="this.remove()"></div>
+          <div>
+            <h3>Business Strategy Intern</h3>
+            <div class="meta">ITMSA @ Ted Rogers School of Management · Toronto, ON</div>
+          </div>
         </div>
         <div class="date">Jan 2024 – Apr 2024</div>
       </div>
@@ -344,9 +367,30 @@
 
     <div class="card reveal">
       <div class="top">
-        <div>
-          <h3>Bachelor of Commerce (Honours), Business Technology Management</h3>
-          <div class="meta">Minor in Psychology · Toronto Metropolitan University (formerly Ryerson)</div>
+        <div class="co">
+          <div class="co-logo"><span class="mono" style="color:#004c9b">TRSM</span><img src="logo-trsm.png" alt="Ted Rogers School of Management logo" onerror="this.remove()"></div>
+          <div>
+            <h3>Market Research</h3>
+            <div class="meta">Ted Rogers School of Management · Toronto, ON</div>
+          </div>
+        </div>
+      </div>
+      <ul class="points">
+        <li>Conducted in-depth market share analysis and financial evaluations, providing actionable insights for sales and marketing strategies.</li>
+        <li>Assisted in preparing financial presentations for senior management using Excel and PowerPoint, aligning business performance with strategic goals.</li>
+        <li>Collaborated with cross-functional teams to support decision-making on market share projections and special packs analysis.</li>
+      </ul>
+      <div class="tags"><span class="tag">Excel</span><span class="tag">SQL</span><span class="tag">Python</span></div>
+    </div>
+
+    <div class="card reveal">
+      <div class="top">
+        <div class="co">
+          <div class="co-logo" style="background:var(--accent-soft);border-color:transparent"><svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+          <div>
+            <h3>Bachelor of Commerce (Honours), Business Technology Management</h3>
+            <div class="meta">Minor in Psychology · Toronto Metropolitan University (formerly Ryerson)</div>
+          </div>
         </div>
         <div class="date">Sep 2022 – Apr 2027</div>
       </div>
@@ -363,7 +407,7 @@
     <!-- Project 1: Power BI dashboard -->
     <div class="project reveal">
       <figure class="shot">
-        <img src="images/team-dashboard.png" alt="Power BI dashboard showing a task status donut chart, a project timeline, tasks per owner bar chart, and a project table" loading="lazy">
+        <img src="team-dashboard.png" alt="Power BI dashboard showing a task status donut chart, a project timeline, tasks per owner bar chart, and a project table" loading="lazy">
         <figcaption>The finished Power BI dashboard. Team names and task details are blurred for privacy.</figcaption>
       </figure>
       <div>
@@ -380,7 +424,7 @@
     <!-- Project 2: Red Cap -->
     <div class="project flip reveal">
       <figure class="shot tall">
-        <img src="images/red-cap-post.png" alt="Red Cap Hot Sauce promotional graphic titled Where to Find Us, showing partner store locations and the Second Harvest logo" loading="lazy">
+        <img src="red-cap-post.png" alt="Red Cap Hot Sauce promotional graphic titled Where to Find Us, showing partner store locations and the Second Harvest logo" loading="lazy">
         <figcaption>Promotional graphic I designed in Canva, posted on Red Cap's Instagram.</figcaption>
       </figure>
       <div>
@@ -421,7 +465,7 @@
     <div class="section-head reveal"><h2>Leadership &amp; Volunteering</h2><div class="bar"></div></div>
 
     <div class="card feature reveal">
-      <img src="images/charity-match.jpg" alt="Players from both teams posing together on a lit soccer field at night beside an Ajniha Welfare Society banner" loading="lazy">
+      <img src="charity-match.jpg" alt="Players from both teams posing together on a lit soccer field at night beside an Ajniha Welfare Society banner" loading="lazy">
       <div class="body">
         <div class="highlight">$1,000+ raised</div>
         <h3 style="margin-top:6px">Charity Soccer Match for Palestine</h3>
